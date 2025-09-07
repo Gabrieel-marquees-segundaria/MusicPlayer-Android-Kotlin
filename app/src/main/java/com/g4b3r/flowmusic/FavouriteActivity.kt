@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.harshRajpurohit.musicPlayer.databinding.ActivityFavouriteBinding
+import com.g4b3r.flowmusic.databinding.ActivityFavouriteBinding
 
 class FavouriteActivity : AppCompatActivity() {
 

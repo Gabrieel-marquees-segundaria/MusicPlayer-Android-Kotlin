@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.content.Context
 import android.graphics.Bitmap

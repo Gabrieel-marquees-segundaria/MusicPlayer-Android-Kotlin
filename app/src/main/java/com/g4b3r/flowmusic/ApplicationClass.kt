@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.app.Application
 import android.app.NotificationChannel

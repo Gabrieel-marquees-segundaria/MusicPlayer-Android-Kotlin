@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.content.Context
 import android.content.Intent
@@ -16,10 +16,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.harshRajpurohit.musicPlayer.MusicAdapter.MyHolder
-import com.harshRajpurohit.musicPlayer.databinding.DetailsViewBinding
-import com.harshRajpurohit.musicPlayer.databinding.MoreFeaturesBinding
-import com.harshRajpurohit.musicPlayer.databinding.MusicViewBinding
+import com.g4b3r.flowmusic.MusicAdapter.MyHolder
+import com.g4b3r.flowmusic.databinding.DetailsViewBinding
+import com.g4b3r.flowmusic.databinding.MoreFeaturesBinding
+import com.g4b3r.flowmusic.databinding.MusicViewBinding
 
 class MusicAdapter(private val context: Context, private var musicList: ArrayList<Music>, private val playlistDetails: Boolean = false,
 private val selectionActivity: Boolean = false)
@@ -43,7 +43,7 @@ private val selectionActivity: Boolean = false)
         holder.duration.text = formatDuration(musicList[position].duration)
         Glide.with(context)
             .load(musicList[position].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.new_music_player_icon_slash_screen).centerCrop())
             .into(holder.image)
 
         //for play next feature

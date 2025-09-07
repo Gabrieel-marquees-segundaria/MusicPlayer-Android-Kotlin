@@ -1,10 +1,10 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.harshRajpurohit.musicPlayer.databinding.ActivityPlayNextBinding
+import com.g4b3r.flowmusic.databinding.ActivityPlayNextBinding
 
 class PlayNext : AppCompatActivity() {
 

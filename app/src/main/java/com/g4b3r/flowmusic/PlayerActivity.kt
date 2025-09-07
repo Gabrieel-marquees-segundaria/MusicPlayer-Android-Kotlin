@@ -1,6 +1,8 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
@@ -19,6 +21,7 @@ import android.os.IBinder
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.widget.LinearLayout
+import android.widget.RemoteViews
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,8 +30,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.harshRajpurohit.musicPlayer.databinding.ActivityPlayerBinding
-import com.harshRajpurohit.musicPlayer.databinding.AudioBoosterBinding
+import com.g4b3r.flowmusic.databinding.ActivityPlayerBinding
+import com.g4b3r.flowmusic.databinding.AudioBoosterBinding
 
 class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCompletionListener {
 
@@ -52,6 +55,22 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        val appWidgetId = intent?.extras?.getInt(
+            AppWidgetManager.EXTRA_APPWIDGET_ID,
+            AppWidgetManager.INVALID_APPWIDGET_ID
+        ) ?: AppWidgetManager.INVALID_APPWIDGET_ID
+        val resultValue = Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+        setResult(Activity.RESULT_CANCELED, resultValue)
+        val appWidgetManager = AppWidgetManager.getInstance(this)
+
+        val views = RemoteViews(this.packageName, R.layout.example_appwidget)
+        appWidgetManager.updateAppWidget(appWidgetId, views)
+
+
+
+
+
+
         super.onCreate(savedInstanceState)
         setTheme(MainActivity.currentTheme[MainActivity.themeIndex])
         binding = ActivityPlayerBinding.inflate(layoutInflater)

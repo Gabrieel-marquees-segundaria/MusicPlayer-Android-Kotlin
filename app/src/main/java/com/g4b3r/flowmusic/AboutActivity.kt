@@ -1,8 +1,8 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.harshRajpurohit.musicPlayer.databinding.ActivityAboutBinding
+import com.g4b3r.flowmusic.databinding.ActivityAboutBinding
 
 class AboutActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -13,8 +13,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.harshRajpurohit.musicPlayer.databinding.FavouriteViewBinding
-import com.harshRajpurohit.musicPlayer.databinding.MoreFeaturesBinding
+import com.g4b3r.flowmusic.databinding.FavouriteViewBinding
+import com.g4b3r.flowmusic.databinding.MoreFeaturesBinding
 
 class FavouriteAdapter(private val context: Context, private var musicList: ArrayList<Music>,val playNext: Boolean = false) : RecyclerView.Adapter<FavouriteAdapter.MyHolder>() {
 
@@ -33,7 +33,7 @@ class FavouriteAdapter(private val context: Context, private var musicList: Arra
         holder.name.text = musicList[position].title
         Glide.with(context)
             .load(musicList[position].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.new_music_player_icon_slash_screen).centerCrop())
             .into(holder.image)
 
         //when play next music is clicked

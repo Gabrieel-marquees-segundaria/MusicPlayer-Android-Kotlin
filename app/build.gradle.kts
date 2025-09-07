@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.harshRajpurohit.musicPlayer"
+    namespace = "com.g4b3r.flowmusic"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.harshRajpurohit.musicPlayer"
+        applicationId = "com.g4b3r.flowmusic"
         minSdk = 21
         targetSdk = 34
         versionCode = 11

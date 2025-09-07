@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.harshRajpurohit.musicPlayer.databinding.ActivityPlaylistBinding
-import com.harshRajpurohit.musicPlayer.databinding.AddPlaylistDialogBinding
+import com.g4b3r.flowmusic.databinding.ActivityPlaylistBinding
+import com.g4b3r.flowmusic.databinding.AddPlaylistDialogBinding
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList

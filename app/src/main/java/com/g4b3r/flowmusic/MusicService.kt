@@ -1,4 +1,4 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -67,7 +67,7 @@ class MusicService : Service(), AudioManager.OnAudioFocusChangeListener {
         val image = if (imgArt != null) {
             BitmapFactory.decodeByteArray(imgArt, 0, imgArt.size)
         } else {
-            BitmapFactory.decodeResource(resources, R.drawable.music_player_icon_slash_screen)
+            BitmapFactory.decodeResource(resources, R.drawable.new_music_player_icon_slash_screen)
         }
 
         val notification =
@@ -201,14 +201,14 @@ class MusicService : Service(), AudioManager.OnAudioFocusChangeListener {
         PlayerActivity.musicService?.createMediaPlayer()
         Glide.with(context)
             .load(PlayerActivity.musicListPA[PlayerActivity.songPosition].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.new_music_player_icon_slash_screen).centerCrop())
             .into(PlayerActivity.binding.songImgPA)
 
         PlayerActivity.binding.songNamePA.text = PlayerActivity.musicListPA[PlayerActivity.songPosition].title
 
         Glide.with(context)
             .load(PlayerActivity.musicListPA[PlayerActivity.songPosition].artUri)
-            .apply(RequestOptions().placeholder(R.drawable.music_player_icon_slash_screen).centerCrop())
+            .apply(RequestOptions().placeholder(R.drawable.new_music_player_icon_slash_screen).centerCrop())
             .into(NowPlaying.binding.songImgNP)
 
         NowPlaying.binding.songNameNP.text = PlayerActivity.musicListPA[PlayerActivity.songPosition].title

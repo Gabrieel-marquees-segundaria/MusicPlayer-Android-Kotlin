@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Music Player"
+rootProject.name = "Flow Music"
 include(":app")
  

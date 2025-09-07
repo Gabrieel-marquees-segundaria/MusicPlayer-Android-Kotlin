@@ -1,10 +1,10 @@
-package com.harshRajpurohit.musicPlayer
+package com.g4b3r.flowmusic
 
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.harshRajpurohit.musicPlayer.databinding.ActivitySettingsBinding
+import com.g4b3r.flowmusic.databinding.ActivitySettingsBinding
 
 class SettingsActivity : AppCompatActivity() {
 
